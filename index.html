@@ -1,19 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo list php</title>
+  <title>To-do-list/PHP</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-      <div class="to-do">
-        <h1>thimgs to do</h1>
-        <form action="" method="get" class="todo-form">
-          <input type="text" name="desc" placeholder="escreva sua tarefa aqui" required>
-          <button type="submit"class="form-button" ></button>
+  <div id="to-do">
+    <h1>Things to-do</h1>
 
+    <form action="" class="to-do-form">
+      <input type="text" name="desc" placeholder="Tesk aqui" required>
+      <button type="submit" class="form-button">
+        <i class="fa-solid fa-plus"></i> <!-- Ícone de adicionar -->
+      </button>
+    </form>
+
+    <div id="tasks">
+      <div class="task">
+        <input type="checkbox" name="progress" id="progress" class="progress">
+        
+        <p class="task-desc"></p>
+
+        <div class="task-actions">
+          <a href="#" class="action-button edit-button">
+            <i class="fa-solid fa-pen-to-square"></i> <!-- Ícone de edição -->
+          </a>
+          <a href="#" class="action-button delete-button">
+            <i class="fa-solid fa-trash"></i> <!-- Ícone de lixeira -->
+          </a>
+        </div>
+
+        <form action="" class="to-do-form-edit hidden">
+          <input type="text" name="description" placeholder="Edit aqui">
+          <button type="submit" class="form-button confirm-button">
+            <i class="fa-solid fa-check"></i> <!-- Ícone de confirmar -->
+          </button>
         </form>
       </div>
-  
+    </div>
+  </div>
 </body>
-</html>
+
